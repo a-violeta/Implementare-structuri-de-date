@@ -1,0 +1,3 @@
+lapte 64
+busuioc 74
+aghiasma 64
