@@ -1,9 +1,10 @@
-//merge
-//2 liste de produse si cantitati devin o a treia unde nu se repeta chestii si au cantitatea maxima
+//2 liste de produse si cantitati devin o noua lista unde nu se repeta nimic si au cantitatea noua
 #include <iostream>
 #include <fstream>
 #include <vector>
+
 typedef std::pair<std::string, int> aliment;
+
 void citire(const std::string& fisier, std::vector<aliment>& lista)
 {
 	std::ifstream fis(fisier);
@@ -18,6 +19,7 @@ void citire(const std::string& fisier, std::vector<aliment>& lista)
 		lista.emplace_back(nume, cantitate);
 	fis.close();
 }
+
 void combinare(const std::vector<aliment>& lista1, const std::vector<aliment>& lista2, std::vector<aliment>& lista3)
 {
 	bool ok = 0;
@@ -45,6 +47,7 @@ void combinare(const std::vector<aliment>& lista1, const std::vector<aliment>& l
 			lista3.emplace_back(it.first, it.second);
 	}
 }
+
 int main()
 {
 	std::vector<aliment> lista1;
@@ -56,4 +59,5 @@ int main()
 	for (const auto& it : lista3)
 		std::cout << it.first << " " << it.second << "\n";
 	return 0;
+
 }
