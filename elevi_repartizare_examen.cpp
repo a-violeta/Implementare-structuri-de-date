@@ -1,8 +1,8 @@
 ﻿//speram sa mearga si cu fisiere
 //random number generator
 //citire string din fisier
-//coada ce are elevi ce dau examen in mai multe zile si fiecare are un timp aleatoriu pt examen
-//elevii ramasi merg in fisier pt urmatoarea zi
+//Avem mai multi elevi ce dau examen in mai multe zile si fiecare are un timp aleatoriu pt examen
+//Daca nu au avut destul timp in prima zi, elevii ramasi sunt pusi in fisier pt urmatoarea zi
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
@@ -11,11 +11,13 @@
 #include <fstream>
 std::ifstream fin("fis.in");
 std::ofstream fout("fis.out");
+
 struct nod
 {
     char info[50];
     nod* urm = nullptr;
 };
+
 struct coada
 {
     nod* primul = nullptr;
@@ -75,6 +77,7 @@ struct coada
         return nr_elem;
     }
 };
+
 int main()
 {
     coada c;
@@ -107,4 +110,5 @@ int main()
     }
     fout.close();
     return 0;
+
 }
