@@ -1,7 +1,7 @@
-//Se citeste dintr-un fisier un text Ón care cuvintele sunt separate prin spatii.
-//Pot exista si semne de punctuatie. Se cere la final afisarea Ón ordine alfabetica a cuv
-//Fiecare cuv‚nt se afiseaza o singura data, av‚nd alaturi numarul de aparitii.
-//Utilizaµi map din STL. Semnele de punctuatie se ignora.
+//Se citeste dintr-un fisier un text √Æn care cuvintele sunt separate prin spatii.
+//Pot exista si semne de punctuatie. Se cere la final afisarea √Æn ordine alfabetica a cuv
+//Fiecare cuv√¢nt se afiseaza o singura data, av√¢nd alaturi numarul de aparitii.
+//Utilizaƒæi map din STL. Semnele de punctuatie se ignora.
 
 //cu strtok iau cuv, separatorul fiind { " " , ", " , ". " , "? ",  "! ",  "; ",  ": ", " (", ") ", " "", "" " }
 //oare cate sunt considerate semne de punctuatie
@@ -12,6 +12,7 @@
 #include <fstream>
 #include <map>
 #include <string>
+
 void citire(const std::string& cale, std::map<std::string, int>& cuvinte)
 {
 	//verificare fis deschis
@@ -59,11 +60,13 @@ void citire(const std::string& cale, std::map<std::string, int>& cuvinte)
 	if (!cuv.empty())
 		cuvinte[cuv]++;
 }
+
 void afisare(const std::map<std::string, int>& cuvinte)
 {
 	for (const auto& it : cuvinte)
 		std::cout << it.first << " " << "cu frecventa: " << it.second << "\n";
 }
+
 int main()
 {
 	std::map<std::string, int> cuvinte;
