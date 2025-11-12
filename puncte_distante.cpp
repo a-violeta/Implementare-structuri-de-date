@@ -1,11 +1,15 @@
+//citim n puncte, cautam cele 2 puncte cu distanta minima intre ele si cele 2 puncte cu distanta maxima intre ele
+
 //nu merge inca
 //nu e functie
 //struct punct cu coord x si y si functie distanta(punct a, punct b)
 //cout cele mai departate si cele mai apropiate
+
 #include <iostream>
 #include "punct.h"
 #include <vector>
 #include <limits>
+
 int main()
 {
 	std::vector<punct> puncte;
@@ -39,3 +43,4 @@ int main()
 	std::cout << "Distanta maxima se afla intre punctele: (" << a.get_x() << "; " << a.get_y() << ") si (" << b.get_x() << "; " << b.get_y() << ") iar distanta minima se afla intre punctele: (" << c.get_x() << "; " << c.get_y() << ") si (" << d.get_x() << "; " << d.get_y() << ")\n";
 	return 0;
 }
+
