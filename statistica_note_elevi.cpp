@@ -1,10 +1,13 @@
 //nu are functii
+
+//Se citesc n note dintr un catalog, se cere sa se afiseze nr de note in fiecare interval [1,5), [5,5.50), [5.50,6), .., [9.50, 10]
 //std::vector<float> note;
 //cin>>nr si elem vector
 //cout note din intervalele [1,5), [5,5.50), [5.50,6), .., [9.50, 10]
 #include <iostream>
 #include <vector>
 #include <algorithm>
+
 int main()
 {
 	int nr, i;
@@ -16,6 +19,7 @@ int main()
 		std::cin >> nota;
 		note.emplace_back(nota);
 	}
+	
 	sort(note.begin(), note.end());
 	int* statistica = new int[21]();
 	for (float& it : note)
@@ -26,7 +30,7 @@ int main()
 			if (it == 10)
 			statistica[19]++;
 			else
-				statistica[static_cast<int>(it*2.00)]++; //static_cast<int>(it) face int
+				statistica[static_cast<int>(it*2.00)]++; //static_cast<int>(it) transforma in int
 	}
 	for (i = 0; i < 20; i++)
 		if (statistica[i])
@@ -50,3 +54,4 @@ int main()
 	return 0;
 
 }
+
