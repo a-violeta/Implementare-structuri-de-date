@@ -1,4 +1,6 @@
-//merge, nu stiu de arboriIdentici, arboreComplet
+//neverificate: arboriIdentici, arboreComplet
+
+//operatii cu arbore
 #include <iostream>
 #include <queue>
 #include <fstream>
@@ -141,4 +143,5 @@ int main()
     std::cout << "Adancimea nodului cu valoarea 5: " << adancimeNod(radacina, 5, 0) << "\n";
     delete radacina; // Eliberare memorie
     return 0;
+
 }
