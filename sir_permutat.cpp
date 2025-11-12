@@ -1,9 +1,12 @@
-﻿//virus
+﻿//virus?
 //merge pe sandbox
+
+//verificare daca un string este permutarea altui string, string urile fiind citite din fisier
 #include <iostream>
 #include <unordered_map>
 #include <string>
 #include <fstream>
+
 bool isPermutation(const std::string& str1, const std::string& str2)
 {
     if (str1.length() != str2.length())
@@ -24,6 +27,7 @@ bool isPermutation(const std::string& str1, const std::string& str2)
         }
     return true;
 }
+
 int main()
 {
     std::ifstream inputFile("input.txt");
@@ -44,4 +48,5 @@ int main()
     else
         std::cout << "Second string is not a permutation of the first.\n";
     return 0;
+
 }
