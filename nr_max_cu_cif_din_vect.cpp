@@ -1,4 +1,3 @@
-//merge
 //numar maxim cu toate cif pare dintr un vector
 #include <iostream>
 int numar(int* v, int nr)
@@ -34,4 +33,5 @@ int main()
 	std::cout << numar(v, nr);
 	delete[] v;
 	return 0;
+
 }
