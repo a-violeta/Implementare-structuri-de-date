@@ -1,4 +1,4 @@
-﻿//da cod diferit de chat gpt
+﻿//codificare huffman
 #include <iostream>
 #include <fstream>
 #include <unordered_map>
@@ -141,4 +141,5 @@ int main()
 //|    'c'   |     111    |    100   |
 //+----------+------------+----------+
 //|    's'   |    1101    |   1100   |
+
 //+----------+------------+----------+
