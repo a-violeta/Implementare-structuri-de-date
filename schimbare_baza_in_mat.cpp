@@ -1,5 +1,4 @@
-//merge
-//mat cu nr in baza j+2 pe coloane
+//citim mat cu nr in baza 10 si le transformam in nr in baza j+2 pe coloane
 #include <iostream>
 bool validare(int n, int m, int** mat)
 {
@@ -50,4 +49,5 @@ int main()
 	delete[] mat[0];
 	delete[] mat;
 	return 0;
+
 }
