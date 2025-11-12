@@ -1,6 +1,5 @@
-//merge
 //nu are functii
-//mat si sume pe puncte cardinale
+//cautare suma max in mat din sumele sectoarelor din mat impartite pe punctele cardinale
 #include <iostream>
 int main()
 {
@@ -47,4 +46,5 @@ int main()
 	    delete[] mat[i];
 	delete[] mat;
 	return 0;
+
 }
