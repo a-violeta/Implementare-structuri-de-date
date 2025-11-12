@@ -1,14 +1,16 @@
-//merge
-//citire string din fisier
-//std::vector<std::tuple<std::string, std::string, int, int, int>>
+//citire nume, prenume si cate 3 note pt fiecare elev din fisier
+//std::vector<std::tuple<std::string, std::string, int, int, int>> vector de elevi cu nume, prenume si cele 3 note
 //sortare descrescatoare elevi dupa medie
 //afisare
+
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <tuple>
 #include <algorithm>
+
 typedef std::tuple<std::string, std::string, int, int, int> elev;
+
 void citire_elevi(const std::string& fisier, std::vector<elev> & toti_elevii)
 {
 	std::ifstream fis(fisier);
@@ -23,10 +25,12 @@ void citire_elevi(const std::string& fisier, std::vector<elev> & toti_elevii)
 		toti_elevii.emplace_back(nume, prenume, n1, n2, n3);
 	fis.close();
 }
+
 double medie(const elev& e)
 {
 	return (std::get<2>(e) + std::get<3>(e) + std::get<4>(e)) / 3.0; //get<0> exista
 }
+		
 int main()
 {
 	std::vector<elev> toti_elevii;
@@ -35,7 +39,9 @@ int main()
 		{
 			return medie(a) > medie(b);
 		};
+
 	std::sort(toti_elevii.begin(), toti_elevii.end(), comparator);
+
 	for (const auto& elev : toti_elevii)
 	{
 		std::cout << std::get<0>(elev) << " " << std::get<1>(elev) << " " << std::get<2>(elev) << " " << std::get<3>(elev) << " " << std::get<4>(elev) << " ";
@@ -45,4 +51,5 @@ int main()
 			std::cout << "\n";
 	}
 	return 0;
+
 }
