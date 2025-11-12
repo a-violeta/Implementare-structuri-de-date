@@ -1,4 +1,3 @@
-﻿//merge
 #include <iostream>
 #include <list>
 #include <utility>
@@ -51,6 +50,7 @@ public:
         }
     }
 };
+
 int main()
 {
     HashTable ht;
@@ -112,4 +112,5 @@ int main()
         }
     } while (choice != 4);
     return 0;
+
 }
