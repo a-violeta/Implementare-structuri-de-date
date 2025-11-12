@@ -1,5 +1,4 @@
-//merge
-//interclasare cu vect sortati invers unul fata de celalat
+//interclasare a 2 vect sortati invers unul fata de celalat
 #include <iostream>
 void vect(int nr1, int nr2, int nr3, int*& v1, int*& v2, int*& v3)
 {
@@ -53,4 +52,5 @@ int main()
 		std::cout << v3[i] << " ";
 	delete[] v3;
 	return 0;
+
 }
