@@ -1,8 +1,7 @@
-//merge
 //nu are functii
 //std::vector<float> note;
 //cin>>nr si elem vector
-//cout note [1,5), [5,5.50), [5.50,6), .., [9.50, 10]
+//cout note din intervalele [1,5), [5,5.50), [5.50,6), .., [9.50, 10]
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -49,4 +48,5 @@ int main()
 						std::cout << "Exista 1 nota in intervalul [" << i / 2 + 0.5 << ", " << i / 2 + 1 << ")\n";
 	delete[] statistica;
 	return 0;
+
 }
