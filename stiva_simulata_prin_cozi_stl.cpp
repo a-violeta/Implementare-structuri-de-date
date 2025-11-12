@@ -1,7 +1,7 @@
-﻿//merge
-//parantezare cu stiva simulata prin 2 cozi stl
+//problema parantezarii rezolvata cu o stiva simulata prin 2 cozi stl
 //citire string de la tastatura
-//std::queue
+//utilizare std::queue
+//functionalitati:
 //push(element) : Adaugă un element la sfârșitul cozii
 //pop() : Elimină primul element din coadă
 //front() : Returnează referința către primul element din coadă
@@ -16,10 +16,10 @@
 //pop_front() : Elimină primul element din listă
 //insert(iterator, element) : Adaugă un element înaintea poziției indicată de iterator
 //iterator e pointer la ceva din lista
-// 
+
 //Iteratorul este o abstractizare a poziției din structura de date și poate fi văzut ca un pointer către un element din listă
 //Astfel, nu este nevoie să transmitem elemente specifice din listă ca argument, ci doar poziția lor, indicată de iterator
-//Pentru insert, iteratorul indică locul unde va fi inserat noul element înainte.Pentru erase, iteratorul indică elementul care trebuie eliminat
+//Pentru insert, iteratorul indică locul unde va fi inserat noul element înainte. Pentru erase, iteratorul indică elementul care trebuie eliminat
 //Aceste funcții lucrează cu poziții în listă, iar iteratorii sunt utilizati pentru a specifica aceste poziții
 
 //erase(iterator) : Elimină elementul de la poziția indicată de iterator
@@ -28,6 +28,7 @@
 //size() : Returnează numărul de elemente din listă
 //empty() : Verifică dacă lista este goală
 //clear() : Elimină toate elementele din listă
+
 //for (auto it = myList.begin(); it != myList.end(); ++it)
 //    std::cout << *it << " ";
 
@@ -45,6 +46,7 @@
 #include <iostream>
 #include <queue>
 #include <string>
+
 struct stiva
 {
     std::queue<char> q1;
@@ -73,6 +75,7 @@ struct stiva
         return 0;
     }
 };
+
 bool paranteze_corecte(const std::string& sir, stiva s) //permite [] si {}
 {
     char perechea;
@@ -137,6 +140,7 @@ bool paranteze_corecte(const std::string& sir, stiva s) //permite [] si {}
     }
     return s.empty();  // Stiva ar trebui să fie goală la sfârșit
 }
+
 int main()
 {
     stiva s;
@@ -149,3 +153,4 @@ int main()
         std::cout << "Sirul NU este corect parantezat.\n";
     return 0;
 }
+
