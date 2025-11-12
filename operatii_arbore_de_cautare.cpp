@@ -1,6 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+
 struct NOD
 {
     int key;
@@ -9,6 +10,7 @@ struct NOD
     NOD* parent;
     NOD(int k) : key(k), left(nullptr), right(nullptr), parent(nullptr) {}
 };
+
 struct SearchTree
 {
     NOD* root;
@@ -268,4 +270,5 @@ int main()
         }
     }
     return 0;
+
 }
