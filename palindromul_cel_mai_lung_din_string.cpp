@@ -1,4 +1,6 @@
 ﻿//merge pe sandbox
+
+//se citeste un string, se cere cel mai lung palindrom care se poate forma cu literele string ului, daca se poate
 #include <iostream>
 #include <unordered_map>
 #include <string>
@@ -59,4 +61,5 @@ int main()
     else
         std::cout << "Longest palindrome: " << palindrome << "\n";
     return 0;
+
 }
