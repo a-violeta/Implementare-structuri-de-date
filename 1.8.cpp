@@ -1,11 +1,12 @@
-//merge
-//mat, chenare, medie, piramida
+//mat, a) chenare, b) medie, c) piramida
 #include <iostream>
 #include <vector>
+
 struct valori
 {
 	double min, max;
 };
+
 void rezolvare_b(int n, double** mat, std::vector<double> medie)
 {
 	int startLinie = 0, endLinie = n - 1, startColoana = 0, endColoana = n - 1, nr, i, j;
@@ -50,6 +51,7 @@ void rezolvare_b(int n, double** mat, std::vector<double> medie)
 	for (const auto& it : medie)
 		std::cout << it << " ";
 }
+
 int main()
 {
 	//std::vector<std::pair<double, double>> chenar; //first e min, second e max
@@ -159,4 +161,5 @@ int main()
 	rezolvare_b(n, mat, medie);
 	delete[] chenar;
 	return 0;
+
 }
