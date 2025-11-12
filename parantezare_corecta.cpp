@@ -1,5 +1,4 @@
-﻿//merge ok
-//stiva stl pt parantezare corecta
+//stiva stl pt problema parantezare corecta
 //citire string de la tastatura
 //std::stack
 //push(element) : Adaugă un element in vârful stivei
@@ -10,6 +9,7 @@
 #include <iostream>
 #include <stack>
 #include <string>
+
 bool paranteze_corecte(const std::string& sir) //permite [] si {}
 {
     std::stack<char> stiva;        //pt {}
@@ -72,6 +72,7 @@ bool paranteze_corecte(const std::string& sir) //permite [] si {}
     }
     return stiva.empty();  // Stiva ar trebui să fie goală la sfârșit
 }
+
 int main()
 {
     std::string sir;
@@ -83,3 +84,4 @@ int main()
         std::cout << "Sirul NU este corect parantezat.\n";
     return 0;
 }
+
