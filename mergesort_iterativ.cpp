@@ -3,12 +3,12 @@
 #include <stack>
 #include <vector>
 
-// Functie pentru a combina doua subvectori sortati
+// Functie pentru a combina 2 subvectori sortati
 void merge(std::vector<int>& arr, int l, int m, int r) {
     int n1 = m - l + 1;
     int n2 = r - m;
 
-    // Creeaza doua vectori temporari
+    // Creeaza 2 vectori temporari
     std::vector<int> L(n1), R(n2);
 
     // Copiaza datele in vectorii temporari L[] si R[]
@@ -84,6 +84,7 @@ int main() {
     return 0;
 }
 */
+
 #include <iostream>
 #include <stack>
 void merge(int* arr, int l, int m, int r) {
@@ -145,6 +146,7 @@ void mergeSortIterative(int* arr, int n) {
         }
     }
 }
+
 int main()
 {
     int n, i;
@@ -160,4 +162,5 @@ int main()
         std::cout << v[i] << " ";
     delete[] v;
     return 0;
+
 }
