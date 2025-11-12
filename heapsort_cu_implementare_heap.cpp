@@ -1,4 +1,4 @@
-//merge
+//heap, heapsort
 #include <iostream>
 #include <vector>
 // Functie pentru a face o transformare (down-heap) in jos pentru a mentine proprietatea de heap
@@ -36,6 +36,7 @@ void heapSort(std::vector<int>& arr)
         downHeap(arr, i, 0);
     }
 }
+
 int main()
 {
     std::vector<int> vec = { 12, 11, 13, 1334, 9, 3, 194, 5, 6, 7 };
@@ -49,4 +50,5 @@ int main()
         std::cout << num << " ";
     std::cout << "\n";
     return 0;
+
 }
