@@ -1,4 +1,3 @@
-//merge
 //pair pt intervale
 //functie cu param nr returneaza interval
 #include <iostream>
@@ -39,4 +38,5 @@ int main()
 	std::cin >> nr;
 	rezolvare(intervale, nr);
 	return 0;
+
 }
