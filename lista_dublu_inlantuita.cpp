@@ -1,6 +1,4 @@
-//merge
-//gata, 3 ore
-//lista dublu inlantuita cu functii anume si meniu
+//lista dublu inlantuita cu functii si meniu
 #include <iostream>
 struct nod
 {
@@ -8,6 +6,7 @@ struct nod
     nod* ant=nullptr;
     nod* urm=nullptr;
 };
+
 struct lista
 {
     nod* primul=nullptr;
@@ -57,7 +56,7 @@ struct lista
         }
         else
         {
-            std::cerr << "Eroare: Lista este goal„. Nu se poate elimina primul nod.\n";
+            std::cerr << "Eroare: Lista este goal√£. Nu se poate elimina primul nod.\n";
             return;
         }
     }
@@ -125,21 +124,21 @@ struct lista
             nod* nod_nou = new nod;
             nod_nou->info = val;
 
-            // Actualiz„m leg„turile pentru noul nod
+            // Actualiz√£m leg√£turile pentru noul nod
             nod_nou->ant = nod_succesor->ant;
             nod_nou->urm = nod_succesor;
 
-            // Verific„m dac„ nodul succesor este primul nod al listei
+            // Verific√£m dac√£ nodul succesor este primul nod al listei
             if (nod_succesor == primul)
             {
-                primul = nod_nou; // Actualiz„m primul nod al listei
+                primul = nod_nou; // Actualiz√£m primul nod al listei
             }
             else
             {
-                nod_succesor->ant->urm = nod_nou; // Actualiz„m leg„tura urm„toare pentru nodul anterior
+                nod_succesor->ant->urm = nod_nou; // Actualiz√£m leg√£tura urm√£toare pentru nodul anterior
             }
 
-            nod_succesor->ant = nod_nou; // Actualiz„m leg„tura anterioar„ pentru nodul succesor
+            nod_succesor->ant = nod_nou; // Actualiz√£m leg√£tura anterioar√£ pentru nodul succesor
         }
     }
     bool empty() //merge
@@ -331,4 +330,5 @@ int main()
         }
     }
     return 0;
+
 }
